@@ -1,0 +1,73 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| bank               |
+| info               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.42 sec)
+
+mysql> use bank
+Database changed
+mysql> use bank;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_bank |
++----------------+
+| balance        |
+| bio            |
+| deposite       |
++----------------+
+3 rows in set (0.47 sec)
+
+mysql> SELECT * FROM BALANCE;
++---------+----------------+
+| BALANCE | ACCOUNT_NUMBER |
++---------+----------------+
+|     800 | A-101          |
+|    8000 | A-201          |
+|     700 | A-215          |
+|     400 | A-102          |
+|    1000 | A-305          |
+|   11000 | A-217          |
+|    1100 | A-222          |
+|   11050 | A-202          |
++---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM BIO;
++----------------+---------------+------------------+---------------+
+| ACCOUNT_NUMBER | COSTUMER_NAME | COSTUMER_ADDRESS | COSTUMER_CITY |
++----------------+---------------+------------------+---------------+
+| A-101          | JHONSON       | 12SOUTHAMPTON    | AUSTRALIA     |
+| A-201          | SMITH         | 4 NORTH ST.      | RYE           |
+| A-215          | HAYES         | 3 MAIN ST.       | HARRISON      |
+| A-102          | TURNER        | 123 PUTNAM ST.   | STAMFORD      |
+| A-305          | JONES         | 100 MAIN ST.     | HARRISON      |
+| A-217          | LINDSAY       | 175 PARK AVE.    | HARRISON      |
+| A-202          | LABUCHANE     | 13 MELBOURNE ST. | AUSTRALIA     |
+| A-222          | TRAVIS        | 13 NORTH ST.     | CHENNAI       |
++----------------+---------------+------------------+---------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM DEPOSITE;
++-------------+----------------+
+| COSTUMER_ID | ACCOUNT_NUMBER |
++-------------+----------------+
+|   192837456 | A-101          |
+|   192837547 | A-201          |
+|    19283746 | A-215          |
+|   677899011 | A-102          |
+|   182736091 | A-305          |
+|   321123123 | A-217          |
+|   336669999 | A-222          |
+|    19283746 | A-202          |
++-------------+----------------+
+8 rows in set (0.02 sec)
